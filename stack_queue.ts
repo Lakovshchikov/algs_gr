@@ -7,7 +7,7 @@ class Stack<T> {
   }
 
   pop(): T | undefined {
-    return this.items.pop();
+    return this.items.pop(); // remove last
   }
 
   peek(): T | undefined {
@@ -32,7 +32,7 @@ class Queue<T> {
   }
 
   dequeue(): T | undefined {
-    return this.items.shift();
+    return this.items.shift(); // remove first
   }
 
   peek(): T | undefined {

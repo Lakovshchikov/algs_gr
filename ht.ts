@@ -74,3 +74,20 @@ console.log(table.has("banana")); // true
 
 table.delete("apple");
 console.log(table.get("apple")); // undefined
+
+function twoSum(nums: number[], target: number): number[] {
+  const cache = new Map();
+
+  for (let i = 0; i < nums.length; i++) {
+    const diff = target - nums[i];
+
+    if (cache.has(diff)) {
+      const pairIndex = cache.get(diff);
+      return [pairIndex, i];
+    } else {
+      cache.set(diff, i);
+    }
+  }
+
+  return [];
+}
